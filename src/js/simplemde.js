@@ -1479,8 +1479,9 @@ SimpleMDE.prototype.render = function(el) {
 		mode.gitHubSpice = false;
 	}
 
-	this.codemirror = CodeMirror.fromTextArea(el, {
+	this.codemirror = CodeMirror(el, {
 		mode: mode,
+		inputStyle: options.inputStyle,
 		backdrop: backdrop,
 		theme: "paper",
 		tabSize: (options.tabSize != undefined) ? options.tabSize : 2,
